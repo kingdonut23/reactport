@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
-import selfie from './images/20210224_171039.jpg';
+import selfie from './images/selfie.png';
 
 class Contact extends Component {
     render() {
