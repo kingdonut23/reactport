@@ -11,9 +11,9 @@ class Projects extends Component {
 
         if (this.state.activeTab === 0) {
             return (
-                <div>
-                    <Card shadow={3} style={{ minWidth: '450', margin: 'auto', marginBottom:'15px' }} >
-                        <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/LxqLaAF.png) center / cover' }}>React</CardTitle>
+                <div className="projects-body">
+                    <Card shadow={3} style={{ minWidth: '450', margin: 'auto', marginBottom: "20px" }} >
+                        <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/LxqLaAF.png) center / cover' }}></CardTitle>
                         <CardText>
                             Sneakerheads is an app for avid shoe collectors to show off their collections or peruse the collections of others.
                             The user is encouraged to upload a photo and details of their shoe collection to show off to their friends and other collectors.
@@ -26,87 +26,113 @@ class Projects extends Component {
                             <iconButton name="share" />
                         </CardMenu>
                     </Card>
-                    <DataTable  style={{ justifyContent: 'space-between', width: '50%', margin: 'auto'}}
-                        shadow={3}
-                        rows={[
-                            {tech: 'Express'},
-                            {tech: 'Node JS'},
-                            {tech: 'React JS'},
-                            {tech: 'Material UI'},
-                            {tech: 'React-Bootstrap'},
-                            {tech: "MYSQL"}
-                        ]}
-                    >
-                        <TableHeader style={{textAlign: "center"}} name="tech">Technologies</TableHeader>
-                    </DataTable>
+                    <div className="projects-table">
+                        <DataTable style={{ justifyContent: 'space-between', width: '50%', margin: 'auto' }}
+                            shadow={3}
+                            rows={[
+                                { tech: 'Express' },
+                                { tech: 'Node JS' },
+                                { tech: 'React JS' },
+                                { tech: 'Material UI' },
+                                { tech: 'React-Bootstrap' },
+                                { tech: "MYSQL" }
+                            ]}
+                        >
+                            <TableHeader style={{ textAlign: "center" }} name="tech">Technologies</TableHeader>
+                        </DataTable>
+                    </div>
                 </div>
             )
         } else if (this.state.activeTab === 1) {
             return (
-                <div>
-                    <Card shadow={3} style={{ minWidth: '450', margin: 'auto', marginBottom:'15px' }} >
-                        <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/LxqLaAF.png) center / cover' }}>React</CardTitle>
-                        <CardText>
-                            Sneakerheads is an app for avid shoe collectors to show off their collections or peruse the collections of others.
-                            The user is encouraged to upload a photo and details of their shoe collection to show off to their friends and other collectors.
+                <div className="projects-body">
+                    <Cell col="4">
+                        <Card shadow={3} style={{ minWidth: '450', margin: 'auto', marginBottom: "20px" }} >
+                            <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/LxqLaAF.png) center / cover' }}></CardTitle>
+                            <CardText>
+                                Sneakerheads is an app for avid shoe collectors to show off their collections or peruse the collections of others.
+                                The user is encouraged to upload a photo and details of their shoe collection to show off to their friends and other collectors.
                     </CardText>
-                        <CardActions border>
-                            <Button colored href='https://github.com/kingdonut23/Sneaker_Head' target="_blank">GitHub</Button>
-                            <Button colored href='http://sneaker-heads.herokuapp.com/' target="_blank">Link</Button>
-                        </CardActions>
-                        <CardMenu style={{ color: '#fff' }}>
-                            <iconButton name="share" />
-                        </CardMenu>
-                    </Card>
-                    <DataTable  style={{ justifyContent: 'space-between', width: '50%', margin: 'auto'}}
-                        shadow={3}
-                        rows={[
-                            {tech: 'Express'},
-                            {tech: 'Node JS'},
-                            {tech: 'React JS'},
-                            {tech: 'Material UI'},
-                            {tech: 'React-Bootstrap'},
-                            {tech: "MYSQL"}
-                        ]}
-                    >
-                        <TableHeader style={{textAlign: "center"}} name="tech">Technologies</TableHeader>
-                    </DataTable>
-
-                    <Card shadow={3} style={{ minWidth: '450', margin: 'auto', marginBottom:'15px' }} >
-                        <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/mHMn2eB.png) center / cover' }}>React</CardTitle>
-                        <CardText>
-                            BurgerApp was a homework assignment with the SMU Bootcamp that was meant to use Express and MYSQL to create and app to keep track of the burgers eaten. It's intention was to be a fun, funny lighthearted assignment
+                            <CardActions border>
+                                <Button colored href='https://github.com/kingdonut23/Sneaker_Head' target="_blank">GitHub</Button>
+                                <Button colored href='http://sneaker-heads.herokuapp.com/' target="_blank">Link</Button>
+                            </CardActions>
+                            <CardMenu style={{ color: '#fff' }}>
+                                <iconButton name="share" />
+                            </CardMenu>
+                        </Card>
+                        <DataTable style={{ justifyContent: 'space-between', width: '50%', margin: 'auto', }}
+                            shadow={3}
+                            rows={[
+                                { tech: 'Express' },
+                                { tech: 'Node JS' },
+                                { tech: 'React JS' },
+                                { tech: 'Material UI' },
+                                { tech: 'React-Bootstrap' },
+                                { tech: "MYSQL" }
+                            ]}
+                        >
+                            <TableHeader style={{ textAlign: "center" }} name="tech">Technologies</TableHeader>
+                        </DataTable>
+                    </Cell>
+                    <Cell col="4">
+                        <Card shadow={3} style={{ minWidth: '450', margin: 'auto', marginBottom: "20px" }} >
+                            <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/mHMn2eB.png) center / cover' }}></CardTitle>
+                            <CardText>
+                                BurgerApp was a homework assignment with the SMU Bootcamp that was meant to use Express and MYSQL to create and app to keep track of the burgers eaten. It's intention was to be a fun, funny lighthearted assignment
                     </CardText>
-                        <CardActions border>
-                            <Button colored href='https://github.com/kingdonut23/Sneaker_Head' target="_blank">GitHub</Button>
-                            <Button colored href='https://afternoon-ocean-20957.herokuapp.com/' target="_blank">Link</Button>
-                        </CardActions>
-                        <CardMenu style={{ color: '#fff' }}>
-                            <iconButton name="share" />
-                        </CardMenu>
-                    </Card>
-                    <DataTable  style={{ justifyContent: 'space-between', width: '50%', margin: 'auto'}}
-                        shadow={3}
-                        rows={[
-                            {tech: 'Express'},
-                            {tech: 'Node JS'},
-                            {tech: 'React JS'},
-                            {tech: 'Material UI'},
-                            {tech: 'React-Bootstrap'},
-                            {tech: "MYSQL"}
-                        ]}
-                    >
-                        <TableHeader style={{textAlign: "center"}} name="tech">Technologies</TableHeader>
-                    </DataTable>
-                </div>
+                            <CardActions border>
+                                <Button colored href='https://github.com/kingdonut23/Sneaker_Head' target="_blank">GitHub</Button>
+                                <Button colored href='https://afternoon-ocean-20957.herokuapp.com/' target="_blank">Link</Button>
+                            </CardActions>
+                            <CardMenu style={{ color: '#fff' }}>
+                                <iconButton name="share" />
+                            </CardMenu>
+                        </Card>
+                        <DataTable style={{ justifyContent: 'space-between', width: '50%', margin: 'auto' }}
+                            shadow={3}
+                            rows={[
+                                { tech: 'Express' },
+                                { tech: 'Node JS' },
+                                { tech: 'React-Bootstrap' },
+                                { tech: "MYSQL" }
+                            ]}
+                        >
+                            <TableHeader style={{ textAlign: "center" }} name="tech">Technologies</TableHeader>
+                        </DataTable>
+                    </Cell>
+                </div >
             )
         } else if (this.state.activeTab === 2) {
             return (
-                <div><h1>NodeJS</h1></div>
-            )
-        } else if (this.state.activeTab === 3) {
-            return (
-                <div><h1>MongoDB</h1></div>
+                <div>
+                    <Cell col="4">
+                        <Card shadow={3} style={{ minWidth: '450', margin: 'auto', marginBottom: "20px" }} >
+                            <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/mHMn2eB.png) center / cover' }}></CardTitle>
+                            <CardText>
+                                BurgerApp was a homework assignment with the SMU Bootcamp that was meant to use Express and MYSQL to create and app to keep track of the burgers eaten. It's intention was to be a fun, funny lighthearted assignment
+                    </CardText>
+                            <CardActions border>
+                                <Button colored href='https://github.com/kingdonut23/Sneaker_Head' target="_blank">GitHub</Button>
+                                <Button colored href='https://afternoon-ocean-20957.herokuapp.com/' target="_blank">Link</Button>
+                            </CardActions>
+                            <CardMenu style={{ color: '#fff' }}>
+                                <iconButton name="share" />
+                            </CardMenu>
+                        </Card>
+                        <DataTable style={{ justifyContent: 'space-between', width: '50%', margin: 'auto' }}
+                            shadow={3}
+                            rows={[
+                                { tech: 'Express' },
+                                { tech: 'Node JS' },
+                                { tech: 'React-Bootstrap' },
+                                { tech: "MYSQL" }
+                            ]}
+                        >
+                            <TableHeader style={{ textAlign: "center" }} name="tech">Technologies</TableHeader>
+                        </DataTable>
+                    </Cell>
+                </div>
             )
         }
     }

@@ -123,3 +123,8 @@
     color: black;
     margin-bottom:20px;
   }
+
+  .projects-body {
+    display: flex;
+  }
+
