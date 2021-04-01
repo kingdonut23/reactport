@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell, ListItem, List, ListItemContent } from 'react-mdl';
+import { Grid, Cell } from 'react-mdl';
 
 
 
