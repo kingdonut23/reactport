@@ -12,6 +12,7 @@ class Projects extends Component {
         if (this.state.activeTab === 0) {
             return (
                 <div className="projects-body">
+                    <Cell>
                     <Card shadow={3} style={{ minWidth: '450', margin: 'auto', marginBottom: "20px" }} >
                         <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/LxqLaAF.png) center / cover' }}></CardTitle>
                         <CardText>
@@ -41,6 +42,7 @@ class Projects extends Component {
                             <TableHeader style={{ textAlign: "center" }} name="tech">Technologies</TableHeader>
                         </DataTable>
                     </div>
+                    </Cell>
                 </div>
             )
         } else if (this.state.activeTab === 1) {
@@ -139,13 +141,13 @@ class Projects extends Component {
                 <div>
                     <Cell col="4">
                         <Card shadow={3} style={{ minWidth: '450', margin: 'auto', marginBottom: "20px" }} >
-                            <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/mHMn2eB.png) center / cover' }}></CardTitle>
+                            <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/nBcXYeA.png) center / cover' }}></CardTitle>
                             <CardText>
-                                BurgerApp was a homework assignment with the SMU Bootcamp that was meant to use Express and MYSQL to create and app to keep track of the burgers eaten. It's intention was to be a fun, funny lighthearted assignment
+                                A simple budget tracker, using MongoDB. Not to flashy and minimalist but satisfying to use. Was designed for offline and online use. 
                     </CardText>
                             <CardActions border>
-                                <Button colored href='https://github.com/kingdonut23/Sneaker_Head' target="_blank">GitHub</Button>
-                                <Button colored href='https://afternoon-ocean-20957.herokuapp.com/' target="_blank">Link</Button>
+                                <Button colored href='https://github.com/kingdonut23/Budget' target="_blank">GitHub</Button>
+                                <Button colored href='https://vast-beach-15337.herokuapp.com/' target="_blank">Link</Button>
                             </CardActions>
                             <CardMenu style={{ color: '#fff' }}>
                                 <iconButton name="share" />
@@ -156,10 +158,8 @@ class Projects extends Component {
                             rows={[
                                 { tech: 'Express' },
                                 { tech: 'Node JS' },
-                                { tech: 'React-Bootstrap' },
                                 { tech: 'Javascript'},
-                                { tech: 'HTML'},
-                                { tech: "MYSQL" }
+                                { tech: "MongoDB" }
                             ]}
                         >
                             <TableHeader style={{ textAlign: "center" }} name="tech">Technologies</TableHeader>
