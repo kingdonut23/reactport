@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardActions, Button, CardMenu, IconButton, CardText } from 'react-mdl';
+import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardActions, Button, CardMenu, CardText, DataTable, TableHeader } from 'react-mdl';
 
 class Projects extends Component {
     constructor(props) {
@@ -11,37 +11,94 @@ class Projects extends Component {
 
         if (this.state.activeTab === 0) {
             return (
-                <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }} >
-                    <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/LxqLaAF.png) center / cover' }}>React</CardTitle>
-                    <CardText>
-                        Sneakerheads is an app for avid shoe collectors to show off their collections or peruse the collections of others.
-                        The user is encouraged to upload a photo and details of their shoe collection to show off to their friends and other collectors.
+                <div>
+                    <Card shadow={3} style={{ minWidth: '450', margin: 'auto', marginBottom:'15px' }} >
+                        <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/LxqLaAF.png) center / cover' }}>React</CardTitle>
+                        <CardText>
+                            Sneakerheads is an app for avid shoe collectors to show off their collections or peruse the collections of others.
+                            The user is encouraged to upload a photo and details of their shoe collection to show off to their friends and other collectors.
                     </CardText>
-                    <CardActions border>
-                        <Button colored href='https://github.com/kingdonut23/Sneaker_Head' target="_blank">GitHub</Button>
-                        <Button colored href='http://sneaker-heads.herokuapp.com/' target="_blank">Link</Button>
-                    </CardActions>
-                    <CardMenu style={{ color: '#fff' }}>
-                        <iconButton name="share" />
-                    </CardMenu>
-                </Card>
+                        <CardActions border>
+                            <Button colored href='https://github.com/kingdonut23/Sneaker_Head' target="_blank">GitHub</Button>
+                            <Button colored href='http://sneaker-heads.herokuapp.com/' target="_blank">Link</Button>
+                        </CardActions>
+                        <CardMenu style={{ color: '#fff' }}>
+                            <iconButton name="share" />
+                        </CardMenu>
+                    </Card>
+                    <DataTable  style={{ justifyContent: 'space-between', width: '50%', margin: 'auto'}}
+                        shadow={3}
+                        rows={[
+                            {tech: 'Express'},
+                            {tech: 'Node JS'},
+                            {tech: 'React JS'},
+                            {tech: 'Material UI'},
+                            {tech: 'React-Bootstrap'},
+                            {tech: "MYSQL"}
+                        ]}
+                    >
+                        <TableHeader style={{textAlign: "center"}} name="tech">Technologies</TableHeader>
+                    </DataTable>
+                </div>
             )
         } else if (this.state.activeTab === 1) {
             return (
-                <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }} >
-                <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/LxqLaAF.png) center / cover' }}>React</CardTitle>
-                <CardText>
-                    Sneakerheads is an app for avid shoe collectors to show off their collections or peruse the collections of others.
-                    The user is encouraged to upload a photo and details of their shoe collection to show off to their friends and other collectors.
-                </CardText>
-                <CardActions border>
-                    <Button colored href='https://github.com/kingdonut23/Sneaker_Head' target="_blank">GitHub</Button>
-                    <Button colored href='http://sneaker-heads.herokuapp.com/' target="_blank">Link</Button>
-                </CardActions>
-                <CardMenu style={{ color: '#fff' }}>
-                    <iconButton name="share" />
-                </CardMenu>
-            </Card>
+                <div>
+                    <Card shadow={3} style={{ minWidth: '450', margin: 'auto', marginBottom:'15px' }} >
+                        <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/LxqLaAF.png) center / cover' }}>React</CardTitle>
+                        <CardText>
+                            Sneakerheads is an app for avid shoe collectors to show off their collections or peruse the collections of others.
+                            The user is encouraged to upload a photo and details of their shoe collection to show off to their friends and other collectors.
+                    </CardText>
+                        <CardActions border>
+                            <Button colored href='https://github.com/kingdonut23/Sneaker_Head' target="_blank">GitHub</Button>
+                            <Button colored href='http://sneaker-heads.herokuapp.com/' target="_blank">Link</Button>
+                        </CardActions>
+                        <CardMenu style={{ color: '#fff' }}>
+                            <iconButton name="share" />
+                        </CardMenu>
+                    </Card>
+                    <DataTable  style={{ justifyContent: 'space-between', width: '50%', margin: 'auto'}}
+                        shadow={3}
+                        rows={[
+                            {tech: 'Express'},
+                            {tech: 'Node JS'},
+                            {tech: 'React JS'},
+                            {tech: 'Material UI'},
+                            {tech: 'React-Bootstrap'},
+                            {tech: "MYSQL"}
+                        ]}
+                    >
+                        <TableHeader style={{textAlign: "center"}} name="tech">Technologies</TableHeader>
+                    </DataTable>
+
+                    <Card shadow={3} style={{ minWidth: '450', margin: 'auto', marginBottom:'15px' }} >
+                        <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/mHMn2eB.png) center / cover' }}>React</CardTitle>
+                        <CardText>
+                            BurgerApp was a homework assignment with the SMU Bootcamp that was meant to use Express and MYSQL to create and app to keep track of the burgers eaten. It's intention was to be a fun, funny lighthearted assignment
+                    </CardText>
+                        <CardActions border>
+                            <Button colored href='https://github.com/kingdonut23/Sneaker_Head' target="_blank">GitHub</Button>
+                            <Button colored href='https://afternoon-ocean-20957.herokuapp.com/' target="_blank">Link</Button>
+                        </CardActions>
+                        <CardMenu style={{ color: '#fff' }}>
+                            <iconButton name="share" />
+                        </CardMenu>
+                    </Card>
+                    <DataTable  style={{ justifyContent: 'space-between', width: '50%', margin: 'auto'}}
+                        shadow={3}
+                        rows={[
+                            {tech: 'Express'},
+                            {tech: 'Node JS'},
+                            {tech: 'React JS'},
+                            {tech: 'Material UI'},
+                            {tech: 'React-Bootstrap'},
+                            {tech: "MYSQL"}
+                        ]}
+                    >
+                        <TableHeader style={{textAlign: "center"}} name="tech">Technologies</TableHeader>
+                    </DataTable>
+                </div>
             )
         } else if (this.state.activeTab === 2) {
             return (
