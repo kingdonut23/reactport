@@ -69,6 +69,8 @@ class Projects extends Component {
                                 { tech: 'React JS' },
                                 { tech: 'Material UI' },
                                 { tech: 'React-Bootstrap' },
+                                { tech: 'Javascript'},
+                                { tech: 'HTML'},
                                 { tech: "MYSQL" }
                             ]}
                         >
@@ -82,7 +84,7 @@ class Projects extends Component {
                                 BurgerApp was a homework assignment with the SMU Bootcamp that was meant to use Express and MYSQL to create and app to keep track of the burgers eaten. It's intention was to be a fun, funny lighthearted assignment
                     </CardText>
                             <CardActions border>
-                                <Button colored href='https://github.com/kingdonut23/Sneaker_Head' target="_blank">GitHub</Button>
+                                <Button colored href='https://github.com/kingdonut23/BurgerBuilder' target="_blank">GitHub</Button>
                                 <Button colored href='https://afternoon-ocean-20957.herokuapp.com/' target="_blank">Link</Button>
                             </CardActions>
                             <CardMenu style={{ color: '#fff' }}>
@@ -94,7 +96,35 @@ class Projects extends Component {
                             rows={[
                                 { tech: 'Express' },
                                 { tech: 'Node JS' },
-                                { tech: 'React-Bootstrap' },
+                                { tech: 'Javascript'},
+                                { tech: 'HTML'},
+                                { tech: "MYSQL" }
+                            ]}
+                        >
+                            <TableHeader style={{ textAlign: "center" }} name="tech">Technologies</TableHeader>
+                        </DataTable>
+                    </Cell>
+                    <Cell col="4">
+                        <Card shadow={3} style={{ minWidth: '450', margin: 'auto', marginBottom: "20px" }} >
+                            <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://i.imgur.com/yWgMJgN.png) center / cover' }}></CardTitle>
+                            <CardText>
+                                ShowerThoughts was an app designed as a Social Media forum. Where users could share their random thoughts and express them to like minded quizzical people
+                    </CardText>
+                            <CardActions border>
+                                <Button colored href='https://github.com/kingdonut23/Shower-Thoughts' target="_blank">GitHub</Button>
+                                <Button colored href='https://shower-thoughts-project.herokuapp.com/home' target="_blank">Link</Button>
+                            </CardActions>
+                            <CardMenu style={{ color: '#fff' }}>
+                                <iconButton name="share" />
+                            </CardMenu>
+                        </Card>
+                        <DataTable style={{ justifyContent: 'space-between', width: '50%', margin: 'auto' }}
+                            shadow={3}
+                            rows={[
+                                { tech: 'Express' },
+                                { tech: 'Node JS' },
+                                { tech: 'Javascript'},
+                                { tech: 'HTML'},
                                 { tech: "MYSQL" }
                             ]}
                         >
@@ -102,6 +132,7 @@ class Projects extends Component {
                         </DataTable>
                     </Cell>
                 </div >
+        
             )
         } else if (this.state.activeTab === 2) {
             return (
@@ -126,6 +157,8 @@ class Projects extends Component {
                                 { tech: 'Express' },
                                 { tech: 'Node JS' },
                                 { tech: 'React-Bootstrap' },
+                                { tech: 'Javascript'},
+                                { tech: 'HTML'},
                                 { tech: "MYSQL" }
                             ]}
                         >
@@ -136,17 +169,12 @@ class Projects extends Component {
             )
         }
     }
-
-
-
-
     render() {
         return (
             <div className="catergory-tabs">
                 <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
-                    <Tab>React/SQL</Tab>
-                    <Tab>SQL/JavaScript/Express</Tab>
-                    <Tab>NodeJS/JavaScript</Tab>
+                    <Tab>React</Tab>
+                    <Tab>SQL</Tab>
                     <Tab>MongoDB</Tab>
                 </Tabs>
 
